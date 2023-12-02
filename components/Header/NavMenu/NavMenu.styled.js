@@ -19,7 +19,7 @@ export const Container = styled.div`
   height: 701px;
   border-radius: 25px;
   background: rgba(23, 61, 51, 0.75);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(12.5px);
 `;
 export const CloseSection = styled.div`
   border-bottom: 1px solid #fff;

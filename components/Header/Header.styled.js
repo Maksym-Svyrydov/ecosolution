@@ -11,9 +11,9 @@ export const Container = styled.header`
   padding: 36px 20px;
   height: 112px;
   width: 100%;
+  background-color: #f3f5fa;
   outline: 1px solid tomato;
 `;
-export const LogoWrapp = styled.div``;
 export const Logo = styled(Image)``;
 export const NavWrapp = styled.div`
   color: #173d33;
