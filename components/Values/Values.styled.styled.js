@@ -29,10 +29,12 @@ export const Layout = styled.section`
     list-style: none;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    align-items: start;
+    align-items: center;
+    justify-items: baseline;
+
     padding: 0;
     font-weight: 400;
-    width: 320px;
+    width: 100%;
     margin-bottom: 36px;
   }
   .item {

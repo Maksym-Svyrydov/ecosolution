@@ -25,16 +25,16 @@ const MainSection = () => {
               <path
                 d="M9.62012 4.45312L13.6668 8.49979L9.62012 12.5465"
                 stroke="none"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M2.3335 8.5H13.5535"
                 stroke="none"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
