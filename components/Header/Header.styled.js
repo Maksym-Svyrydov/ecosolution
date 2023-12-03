@@ -11,6 +11,7 @@ export const Container = styled.header`
   padding: 36px 20px;
   height: 112px;
   width: 100%;
+  margin: auto;
   background-color: #f3f5fa;
   outline: 1px solid tomato;
 `;
@@ -27,6 +28,7 @@ export const NavWrapp = styled.div`
 `;
 export const NavBtn = styled.button`
   display: inline-flex;
+  position: relative;
   height: 39px;
   padding: 4px 12px;
   justify-content: center;

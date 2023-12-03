@@ -111,9 +111,10 @@ const SliderComponent = ({ cases }) => {
             />
             <div className="slide-content">
               <div className="slide-content--wrapper">
-                <p className="slide-content--customer">
-                  {location},{customer}
-                </p>
+                <div>
+                  <p className="slide-content--customer">{location}</p>
+                  <p className="slide-content--customer">{customer}</p>
+                </div>
                 <div>
                   <button className="slider-btn" onClick={next}>
                     <svg

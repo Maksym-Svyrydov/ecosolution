@@ -7,11 +7,16 @@ import circle from '../../img/icons/maximize-circle.svg';
 import global from '../../img/icons/global-edit.svg';
 import cpu from '../../img/icons/cpu-charge.svg';
 import ranking from '../../img/icons/ranking.svg';
+import { useMediaQuery } from '@mui/material';
 
 const ValuesSection = () => {
+  const mobile = useMediaQuery('(max-width:480px)');
+
   return (
     <Layout>
-      <Img src={img} alt="Turbine" placeholder="blur" loading="lazy" />
+      {!mobile && (
+        <Img src={img} alt="Turbine" placeholder="blur" loading="lazy" />
+      )}
       <h2 className="title">Main values of our company</h2>
       <p className="text">
         EcoSolution envisions a world where sustainable energy solutions power a

@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import Image from 'next/image';
-import { Link } from 'next/link';
 
 export const Backdrop = styled.div`
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: 5;
   backdrop-filter: blur(2px);
   width: 100%;
   height: 100%;
@@ -10,11 +13,14 @@ export const Backdrop = styled.div`
 export const Container = styled.div`
   box-sizing: border-box;
   display: flex;
+  top: 55px;
+  right: 30px;
+  position: fixed;
   flex-direction: column;
   color: #fff;
   font-family: Fira Sans;
   padding: 28px 19px;
-  margin: 36px 20px 0px auto;
+  margin: auto auto;
   width: 320px;
   height: 701px;
   border-radius: 25px;

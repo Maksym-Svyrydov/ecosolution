@@ -3,6 +3,7 @@ import logoImg from '../../img/Logo.svg';
 import { NavMenu } from './NavMenu/NavMenu';
 import { useState } from 'react';
 import icon from '../../img/icons/menu.svg';
+
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
 

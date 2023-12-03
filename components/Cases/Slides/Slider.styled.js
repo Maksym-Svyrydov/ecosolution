@@ -69,7 +69,9 @@ export const Slide = styled.div`
     justify-content: space-between;
     align-items: start;
     border-bottom: 1px solid #173d33;
+    padding-bottom: 12px;
     margin-bottom: 12px;
+    min-height: 66px;
   }
   /* .slide-content--location {
     margin: 0;
@@ -87,14 +89,14 @@ export const Slide = styled.div`
   } */
   .slide-content--customer {
     color: #173d33;
-    text-align: justify;
+
     font-family: Fira Sans;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.72px;
-    margin: 0px 60px 21px 0px;
+    margin: 0px 60px 0px 0px;
     padding: 0px;
   }
 
