@@ -1,11 +1,12 @@
 'use client';
-import { useMediaQuery } from '@mui/material';
+// import { useMediaQuery } from '@mui/material';
 import CasesSection from '@/components/Cases/Cases';
 import ElectricitySection from '@/components/Electricity/Electricity';
 import Header from '@/components/Header/Header';
 import MainSection from '@/components/Main/Main';
 import ValuesSection from '@/components/Values/Values';
 import FaqSection from '@/components/FAQ/FAQ';
+import Contacts from '@/components/Contacts/Contact';
 
 export default function Home() {
   // const mobile = useMediaQuery('(max-width:480px)');
@@ -21,6 +22,7 @@ export default function Home() {
       <ElectricitySection />
       <CasesSection />
       <FaqSection />
+      <Contacts />
     </>
   );
 }
