@@ -7,6 +7,7 @@ import MainSection from '@/components/Main/Main';
 import ValuesSection from '@/components/Values/Values';
 import FaqSection from '@/components/FAQ/FAQ';
 import Contacts from '@/components/Contacts/Contact';
+import FormSection from '@/components/Form/Form';
 
 export default function Home() {
   // const mobile = useMediaQuery('(max-width:480px)');
@@ -23,6 +24,7 @@ export default function Home() {
       <CasesSection />
       <FaqSection />
       <Contacts />
+      <FormSection />
     </>
   );
 }
