@@ -14,7 +14,44 @@ export const Container = styled.header`
   width: 100%;
   margin: auto;
   background-color: #f3f5fa;
-  outline: 1px solid tomato;
+  @media screen and (min-width: 767px) {
+    padding: 36px 30px;
+  }
+  .btn {
+    display: inline-flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 500px;
+    background-color: #97d28b;
+    width: 108px;
+    height: 16px;
+    margin: 0px auto 0px auto;
+    color: #173d33;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.64px;
+    transition: background-color 0.25s ease;
+    transition: color 0.25s ease;
+    transition: fill 0.25s ease;
+    @media screen and (min-width: 767px) {
+      margin: 0px 0px 0px 12px;
+    }
+    circle {
+      fill: #173d33;
+    }
+  }
+  .btn:hover {
+    background-color: #173d33;
+    color: #97d28b;
+    circle {
+      fill: #97d28b;
+    }
+  }
 `;
 export const Logo = styled(Image)``;
 export const NavWrapp = styled.div`
@@ -26,6 +63,9 @@ export const NavWrapp = styled.div`
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.64px;
+  @media screen and (min-width: 767px) {
+    margin-left: auto;
+  }
 `;
 export const NavBtn = styled.button`
   display: inline-flex;

@@ -1,12 +1,15 @@
-import { Container, Logo, NavWrapp, NavBtn, IconMenu } from './Header.styled';
-import logoImg from '../../img/Logo.svg';
-import { NavMenu } from './NavMenu/NavMenu';
 import { useState } from 'react';
+import { useMediaQuery } from '@mui/material';
+import { Container, Logo, NavWrapp, NavBtn, IconMenu } from './Header.styled';
+
+import logoImg from '../../img/Logo.svg';
 import icon from '../../img/icons/menu.svg';
+
+import { NavMenu } from './NavMenu/NavMenu';
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
-
+  const tablet = useMediaQuery('(min-width:768px)');
   const toggleNav = () => {
     if (!setShowNav) {
       setShowNav(true);
@@ -35,6 +38,20 @@ const Header = () => {
             </NavBtn>
           )}
         </NavWrapp>
+        {tablet && (
+          <div className="btn">
+            <span>Get in touch</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="15"
+              viewBox="0 0 14 15"
+              fill="none"
+            >
+              <circle cx="7" cy="7.5" r="7" fill="none" />
+            </svg>
+          </div>
+        )}
       </Container>
       {showNav && <NavMenu navClose={toggleNav} />}
     </>

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Slider from 'react-slick';
+
 export const SliderLayout = styled.div`
   .slider-head-section {
     display: flex;
@@ -58,6 +60,7 @@ export const Slide = styled.div`
   width: 100%;
   height: 100%;
   padding: 0;
+
   .slide-content {
     display: flex;
     flex-direction: column;
@@ -156,5 +159,13 @@ export const Slide = styled.div`
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.48px;
+  }
+`;
+export const SliderWrapper = styled(Slider)`
+  .slick-track {
+    @media screen and (min-width: 767px) {
+      display: flex;
+      gap: 12px;
+    }
   }
 `;

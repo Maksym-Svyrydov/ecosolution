@@ -9,12 +9,32 @@ export const Layout = styled.section`
   font-style: normal;
   font-weight: 400;
   box-sizing: border-box;
+  @media screen and (min-width: 767px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 767px) {
+      flex-direction: row;
+      margin-bottom: 100px;
+    }
+  }
   .title {
     font-size: 28px;
     line-height: 28px; /* 100% */
     text-transform: uppercase;
     padding: 0px 40px 0px 0px;
     margin-bottom: 24px;
+    @media screen and (min-width: 767px) {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px; /* 100% */
+      min-width: 272px;
+      margin: 88px 0px 24px 0px;
+    }
   }
   .text {
     text-align: justify;
@@ -23,6 +43,12 @@ export const Layout = styled.section`
     line-height: normal;
     letter-spacing: -0.64px;
     margin: 0px 0px 24px 0px;
+    @media screen and (min-width: 767px) {
+      margin: 88px 0px 0px 0px;
+      border-left: 1px solid #97d28b;
+      padding-left: 11px;
+      max-width: 355px;
+    }
   }
   .list {
     display: grid;

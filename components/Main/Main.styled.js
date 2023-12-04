@@ -6,6 +6,17 @@ export const Layout = styled.section`
   flex-direction: column;
   color: #173d33;
   padding: 0px 20px;
+  @media screen and (min-width: 767px) {
+    padding: 0px 30px;
+    margin: 222px auto 0px auto;
+  }
+  .main-title--wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 767px) {
+      flex-direction: row;
+    }
+  }
   .main-title {
     color: #173d33;
     font-family: Oswald;
@@ -15,7 +26,15 @@ export const Layout = styled.section`
     line-height: 36px; /* 100% */
     text-transform: uppercase;
     margin-bottom: 24px;
+    @media screen and (min-width: 767px) {
+      font-size: 48px;
+      line-height: 48px;
+      padding: 0;
+      margin: 0px 65px 0px 0px;
+      min-width: 301px;
+    }
   }
+
   .main-text {
     color: #173d33;
     text-align: justify;
@@ -26,12 +45,12 @@ export const Layout = styled.section`
     line-height: normal;
     letter-spacing: -0.64px;
     margin-bottom: 24px;
+    @media screen and (min-width: 767px) {
+      padding: 0;
+      margin: 0px 0px 43px 0px;
+    }
   }
-  .main-wrapper {
-    border-bottom: 1px solid #97d28b;
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-  }
+
   .main-link {
     display: flex;
     height: 39px;
@@ -48,6 +67,11 @@ export const Layout = styled.section`
     margin-right: auto;
     cursor: pointer;
     transition: background-color 0.25s ease-in;
+    @media screen and (min-width: 767px) {
+      display: flex;
+      margin-right: auto;
+      margin-left: 0;
+    }
   }
   .main-link:hover {
     border: 1px solid #173d33;
@@ -79,6 +103,16 @@ export const Layout = styled.section`
   .main-link--arrow {
     path {
       stroke: #173d33;
+    }
+  }
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #97d28b;
+    padding-top: 24px;
+    margin: 24px 0px;
+    @media screen and (min-width: 767px) {
+      flex-direction: row;
     }
   }
   .main-address {

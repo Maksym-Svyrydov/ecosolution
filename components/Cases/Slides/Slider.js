@@ -5,9 +5,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-import { SliderLayout, Slide } from './Slider.styled';
+import { SliderLayout, Slide, SliderWrapper } from './Slider.styled';
+import { useMediaQuery } from '@mui/material';
 
 const SliderComponent = ({ cases }) => {
+  const tablet = useMediaQuery('(min-width:768px)');
   const sliderRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(1);
   const [qtySlide, setQtySlide] = useState(cases.length);
@@ -24,7 +26,7 @@ const SliderComponent = ({ cases }) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: tablet ? 2 : 1,
     slidesToScroll: 1,
     afterChange: (current) => setActiveSlide(current + 1),
   };
@@ -100,7 +102,7 @@ const SliderComponent = ({ cases }) => {
           </button>
         </div>
       </div>
-      <Slider ref={sliderRef} {...settings}>
+      <SliderWrapper ref={sliderRef} {...settings}>
         {cases.map(({ id, img, location, customer, project, date }) => (
           <Slide key={id} className="slide">
             <Image
@@ -159,7 +161,7 @@ const SliderComponent = ({ cases }) => {
             </div>
           </Slide>
         ))}
-      </Slider>
+      </SliderWrapper>
     </SliderLayout>
   );
 };
