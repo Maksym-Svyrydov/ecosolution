@@ -70,6 +70,21 @@ border: 1px solid #97D28B;
     transform: scale(1.05);
     background-color: #283340;
     color: #f5f2f0;
+    
+  }
+    .main-link--btn {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background-color: #97d28b;
+  }
+  .main-link--arrow {
+    path {
+      stroke: #173d33;
+    }
   }
   /* @media screen and (max-width: 1364px) {
     width: 140px;
