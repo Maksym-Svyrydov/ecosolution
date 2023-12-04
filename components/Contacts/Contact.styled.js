@@ -37,7 +37,7 @@ export const Section = styled.section`
     height: 24px;
     margin-right: 8px;
   }
-  h2 {
+  .title-contacts {
     color: #173d33;
     font-family: Oswald;
     font-size: 28px;

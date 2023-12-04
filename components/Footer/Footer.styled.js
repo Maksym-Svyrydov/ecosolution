@@ -3,6 +3,41 @@ import Image from 'next/image';
 
 export const Layout = styled.footer`
   padding: 24px 20px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 24px 30px;
+    justify-content: space-between;
+    .list-desktop {
+      display: flex;
+      flex-direction: column;
+    }
+    .list-desktop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 16px;
+    }
+    .list-desktop:nth-last-child(1) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .list-contacts--item {
+      display: block;
+      color: #173d33;
+      font-family: Fira Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.64px;
+    }
+    .item-desktop--img {
+      height: 40px;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+  }
   .logo-wrapper {
     display: flex;
     align-items: center;
@@ -69,8 +104,6 @@ export const Layout = styled.footer`
     gap: 16px;
     justify-content: center;
     align-items: center;
-  }
-  .list-contacts--item {
   }
 `;
 

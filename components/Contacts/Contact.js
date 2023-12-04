@@ -1,9 +1,11 @@
+import { useMediaQuery } from '@mui/material';
 import { Section } from './Contact.styled';
 
 const Contacts = () => {
+  const tablet = useMediaQuery('(min-width:768px)');
   return (
     <Section>
-      <h2>Contact us</h2>
+      {!tablet && <h2 className="title-contacts">Contact us</h2>}
       <div>
         <p>Phone:</p>
         <ul>

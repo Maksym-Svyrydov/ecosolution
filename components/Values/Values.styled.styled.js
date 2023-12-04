@@ -9,16 +9,17 @@ export const Layout = styled.section`
   font-style: normal;
   font-weight: 400;
   box-sizing: border-box;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     padding-left: 30px;
     padding-right: 30px;
   }
   .title-wrapper {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 768px) {
       flex-direction: row;
       margin-bottom: 100px;
+      justify-content: space-between;
     }
   }
   .title {
@@ -27,12 +28,12 @@ export const Layout = styled.section`
     text-transform: uppercase;
     padding: 0px 40px 0px 0px;
     margin-bottom: 24px;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 768px) {
       font-size: 36px;
       font-style: normal;
       font-weight: 400;
       line-height: 36px; /* 100% */
-      min-width: 272px;
+      width: 272px;
       margin: 88px 0px 24px 0px;
     }
   }
@@ -43,7 +44,7 @@ export const Layout = styled.section`
     line-height: normal;
     letter-spacing: -0.64px;
     margin: 0px 0px 24px 0px;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 768px) {
       margin: 88px 0px 0px 0px;
       border-left: 1px solid #97d28b;
       padding-left: 11px;
@@ -53,21 +54,83 @@ export const Layout = styled.section`
   .list {
     display: grid;
     list-style: none;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
     gap: 24px;
     align-items: center;
     justify-items: baseline;
-
     padding: 0;
     font-weight: 400;
-    width: 100%;
     margin-bottom: 36px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, 3fr);
+      grid-template-rows: repeat(1, 3fr);
+      gap: 18px;
+    }
   }
+
+  .box-1 {
+    grid-column: 1;
+    grid-row: 1;
+    @media screen and (min-width: 768px) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+  .box-2 {
+    grid-column: 2;
+    grid-row: 1;
+    @media screen and (min-width: 768px) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+  .box-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row: 1;
+  }
+  .box-4 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  .box-5 {
+    grid-column: 1;
+    grid-row: 2;
+    @media screen and (min-width: 768px) {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+  }
+  .box-6 {
+    grid-column: 2;
+    grid-row: 2;
+    @media screen and (min-width: 768px) {
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+  }
+
   .item {
     background-color: #eaedf1;
-    max-width: 148px;
+    width: 148px;
     height: 197px;
     padding: 0px 8px 0px 8px;
+    @media screen and (min-width: 768px) {
+      width: 159px;
+    }
+  }
+  .item-img {
+    @media screen and (min-width: 768px) {
+      max-width: 345px;
+    }
   }
   .item-title--block {
     padding-top: 13px;

@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import { Field } from 'formik';
 export const Layout = styled.section`
   padding: 36px 20px;
+  @media screen and (min-width: 768px) {
+    background-color: #eaedf1;
+    padding: 36px 24px;
+    border-bottom: none;
+  }
   label {
     margin-bottom: 8px;
     color: #173d33;
@@ -18,34 +23,17 @@ export const Layout = styled.section`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1364px) {
-    width: 100%;
-  }
+  background-color: #eaedf1;
 `;
 export const Input = styled(Field)`
   font-size: 18px;
   color: #283340;
-  background: inherit;
+  background-color: inherit;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #97d28b;
   padding: 6px 10px;
-
-  @media screen and (max-width: 1364px) {
-    ${'' /* width: 100%; */}
-    font-size: 18px;
-    margin: 0px 0px 28px 0px;
-  }
-  @media screen and (min-width: 1365px) {
-    font-size: 18px;
-    margin: 0px 0px 12px 0px;
-  }
-
-  @media screen and (min-width: 1919px) {
-    margin: 0px 0px 20px 0px;
-    font-size: 24px;
-  }
 `;
 export const InputMessage = styled.textarea`
   font-size: 18px;
@@ -56,21 +44,6 @@ export const InputMessage = styled.textarea`
   border-right: none;
   border-bottom: 1px solid #97d28b;
   padding: 6px 10px;
-
-  @media screen and (max-width: 1364px) {
-    ${'' /* width: 100%; */}
-    font-size: 18px;
-    margin: 0px 0px 28px 0px;
-  }
-  @media screen and (min-width: 1365px) {
-    font-size: 18px;
-    margin: 0px 0px 12px 0px;
-  }
-
-  @media screen and (min-width: 1919px) {
-    margin: 0px 0px 20px 0px;
-    font-size: 24px;
-  }
 `;
 
 export const ButtonSubmit = styled.button`

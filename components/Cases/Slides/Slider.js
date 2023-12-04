@@ -34,6 +34,7 @@ const SliderComponent = ({ cases }) => {
   return (
     <SliderLayout>
       <div className="slider-head-section">
+        {tablet && <h1 className="title">Successful cases of our company</h1>}
         <div className="counter-wrapper">
           {activeSlide > 9 ? (
             <span className="counter-active">{activeSlide}/</span>

@@ -3,6 +3,18 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding: 0px 30px;
+    gap: 24px;
+  }
+  .content-layout {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   .title {
     color: #173d33;
     font-family: Oswald;
@@ -11,6 +23,12 @@ export const Section = styled.section`
     font-weight: 400;
     line-height: 28px; /* 100% */
     text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+      line-height: 36px; /* 100% */
+      width: 347px;
+      margin: 0px 0px;
+    }
   }
   .text {
     color: #173d33;
@@ -22,6 +40,9 @@ export const Section = styled.section`
     line-height: normal;
     letter-spacing: -0.72px;
     margin: 16px auto;
+    @media screen and (min-width: 768px) {
+      margin: auto auto 12px auto;
+    }
   }
   .btn {
     display: inline-flex;

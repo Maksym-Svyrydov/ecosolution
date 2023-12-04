@@ -35,7 +35,7 @@ const FormSection = () => {
       email: values.email,
       details: values.details,
     };
-    console.log(values);
+    console.log(data);
     onSubmitProps.resetForm();
     notify();
   }

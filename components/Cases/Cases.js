@@ -5,8 +5,10 @@ import zhytomir from '../../img/content/slides/zhytomir.png';
 import rivne from '../../img/content/slides/rivne.png';
 import kherson from '../../img/content/slides/kherson.png';
 import zap from '../../img/content/slides/zap.png';
+import { useMediaQuery } from '@mui/material';
 
 const CasesSection = () => {
+  const tablet = useMediaQuery('(min-width:768px)');
   const cases = [
     {
       id: 1,
@@ -52,7 +54,7 @@ const CasesSection = () => {
 
   return (
     <Layout>
-      <h1 className="title">Successful cases of our company</h1>
+      {!tablet && <h1 className="title">Successful cases of our company</h1>}
       <SliderComponent cases={cases} />
     </Layout>
   );

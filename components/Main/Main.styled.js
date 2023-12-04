@@ -17,6 +17,11 @@ export const Layout = styled.section`
       flex-direction: row;
     }
   }
+  .text-wrapper {
+    @media screen and (min-width: 767px) {
+      max-width: 342px;
+    }
+  }
   .main-title {
     color: #173d33;
     font-family: Oswald;
@@ -31,7 +36,7 @@ export const Layout = styled.section`
       line-height: 48px;
       padding: 0;
       margin: 0px 65px 0px 0px;
-      min-width: 301px;
+      max-width: 301px;
     }
   }
 

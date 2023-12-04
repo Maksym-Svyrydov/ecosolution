@@ -13,5 +13,14 @@ export const Layout = styled.section`
     font-weight: 400;
     line-height: 28px; /* 100% */
     text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+      width: 264px;
+      height: 72px;
+      margin: 0;
+      line-height: 36px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 `;

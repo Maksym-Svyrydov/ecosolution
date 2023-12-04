@@ -8,7 +8,7 @@ const MainSection = () => {
     <Layout>
       <div className="main-title--wrapper">
         <h1 className="main-title">RENEWABLE ENERGY For any task</h1>
-        <div>
+        <div className="text-wrapper">
           <p className="main-text">
             Development and implementation of renewable non-polluting energy
             sources, generating power generation using energy wind, sun, water,

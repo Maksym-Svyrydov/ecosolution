@@ -16,6 +16,10 @@ export const Layout = styled.section`
     line-height: 28px; /* 100% */
     text-transform: uppercase;
     margin: 0;
+    @media screen and (min-width: 768px) {
+      width: 368px;
+      margin: 100px auto 0px auto;
+    }
   }
   .line {
     width: 1px;
