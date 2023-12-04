@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from 'styled-components';
 import { Layout, InputContainer, Input, ButtonSubmit } from './Form.styled';
+import { TextareaAutosize } from '@mui/material';
 
 const StyledContainer = styled(ToastContainer)`
   .Toastify__toast {
@@ -34,27 +35,9 @@ const FormSection = () => {
       email: values.email,
       details: values.details,
     };
-    console.log(data);
+    console.log(values);
     onSubmitProps.resetForm();
     notify();
-    //  try {
-    //    const response = await fetch('/api/email', {
-    //      method: 'POST',
-    //      body: JSON.stringify(data),
-    //      headers: {
-    //        'Content-Type': 'application/json',
-    //      },
-    //    });
-    //    if (!response.ok) {
-    //      throw new Error('HTTP error! status:' + response.status);
-    //    }
-    //    const responseData = await response.json();
-    //    console.log('responseData:', responseData);
-    //    onSubmitProps.resetForm();
-    //    notify();
-    //  } catch (error) {
-    //    console.log(error.message);
-    //  }
   }
   return (
     <Layout>
@@ -93,7 +76,9 @@ const FormSection = () => {
               id="details"
               name="details"
               placeholder="Your message"
-              type="textarea"
+              as="textarea"
+              className="form-textarea"
+              rows={8}
             />
             <ButtonSubmit type="submit">
               <span>Send</span>
