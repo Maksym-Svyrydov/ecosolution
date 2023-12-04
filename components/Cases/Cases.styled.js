@@ -4,7 +4,12 @@ export const Layout = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
-
+  @media screen and (min-width: 768px) {
+    padding: 0px 30px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 0px 100px;
+  }
   .title {
     color: #173d33;
     font-family: Oswald;
@@ -19,8 +24,6 @@ export const Layout = styled.section`
       height: 72px;
       margin: 0;
       line-height: 36px;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 `;

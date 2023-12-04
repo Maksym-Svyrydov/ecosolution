@@ -10,16 +10,28 @@ export const Layout = styled.section`
     padding: 0px 30px;
     margin: 222px auto 0px auto;
   }
+  @media screen and (min-width: 1440px) {
+    padding: 0px 100px;
+    margin: 222px auto 0px auto;
+    justify-content: space-between;
+  }
+
   .main-title--wrapper {
     display: flex;
     flex-direction: column;
     @media screen and (min-width: 767px) {
       flex-direction: row;
     }
+    @media screen and (min-width: 1440px) {
+    }
   }
   .text-wrapper {
     @media screen and (min-width: 767px) {
       max-width: 342px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin-left: auto;
+      margin-right: 80px;
     }
   }
   .main-title {
@@ -36,7 +48,12 @@ export const Layout = styled.section`
       line-height: 48px;
       padding: 0;
       margin: 0px 65px 0px 0px;
-      max-width: 301px;
+      width: 301px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 64px;
+      line-height: 64px;
+      width: 485px;
     }
   }
 
@@ -140,5 +157,9 @@ export const Layout = styled.section`
     text-decoration: none;
     margin-bottom: 36px;
     cursor: pointer;
+    @media screen and (min-width: 1440px) {
+      margin-left: auto;
+      margin-right: 107px;
+    }
   }
 `;

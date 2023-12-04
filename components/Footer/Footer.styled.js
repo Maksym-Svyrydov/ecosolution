@@ -36,6 +36,7 @@ export const Layout = styled.footer`
       height: 40px;
       align-items: flex-end;
       justify-content: flex-start;
+      gap: 8px;
     }
   }
   .logo-wrapper {

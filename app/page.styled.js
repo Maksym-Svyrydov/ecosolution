@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const DesktopLayout = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 0px 30px 100px 30px;
+  padding: 0px 30px 0px 30px;
   gap: 122px;
   border-bottom: 1px solid #97d28b;
 `;

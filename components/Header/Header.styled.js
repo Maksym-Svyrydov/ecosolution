@@ -17,6 +17,9 @@ export const Container = styled.header`
   @media screen and (min-width: 767px) {
     padding: 36px 30px;
   }
+  @media screen and (min-width: 1440px) {
+    padding: 24px 100px;
+  }
   .btn {
     display: inline-flex;
     padding: 10px 16px;

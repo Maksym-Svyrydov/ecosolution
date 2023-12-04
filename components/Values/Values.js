@@ -27,7 +27,7 @@ const ValuesSection = () => {
           meet the world&#39;s energy needs.
         </p>
       </div>
-      <div>
+      <div className="grid-wrapper">
         {!tablet && (
           <div className="list">
             <div className="item box-1">
@@ -74,8 +74,8 @@ const ValuesSection = () => {
         )}
         {tablet && (
           <>
-            <div className="list">
-              <div className="item box-1">
+            <ul className="list">
+              <li className="item box-1">
                 <div className="item-title--block">
                   <Image
                     src={circle}
@@ -88,8 +88,8 @@ const ValuesSection = () => {
                 <span className="item-text">
                   to the world, people, new ideas and projects
                 </span>
-              </div>
-              <div className="item box-2">
+              </li>
+              <li className="item box-2">
                 <div className="item-title--block">
                   <Image
                     src={global}
@@ -104,9 +104,9 @@ const ValuesSection = () => {
                   we are aware that the results of our work have an impact on
                   our lives and the lives of future generations
                 </span>
-              </div>
-              <div className="item-img box-3">
-                <Image
+              </li>
+              <li className="item-img box-3">
+                <Img
                   // width={234}
                   src={wind}
                   alt="turbines"
@@ -115,12 +115,11 @@ const ValuesSection = () => {
                   fill={false}
                   style={{ objectFit: 'contain' }}
                 />
-              </div>
-            </div>
-            <div className="list">
-              <div className="item-img box-4">
-                <Image
-                  // width={234}
+              </li>
+            </ul>
+            <ul className="list">
+              <li className="item-img box-4">
+                <Img
                   src={solar}
                   alt="solar panel"
                   placeholder="blur"
@@ -128,8 +127,8 @@ const ValuesSection = () => {
                   fill={false}
                   style={{ objectFit: 'contain' }}
                 />
-              </div>
-              <div className="item box-5">
+              </li>
+              <li className="item box-5">
                 <div className="item-title--block">
                   <Image src={cpu} alt="circle icon" width={16} height={16} />
                   <span className="item-title">Innovation</span>
@@ -138,8 +137,8 @@ const ValuesSection = () => {
                   we use the latest technology to implement non-standard
                   solutions
                 </span>
-              </div>
-              <div className="item box-6">
+              </li>
+              <li className="item box-6">
                 <div className="item-title--block">
                   <Image
                     src={ranking}
@@ -154,8 +153,8 @@ const ValuesSection = () => {
                   we do not strive to be the first among others, but we want to
                   be the best in our business
                 </span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </>
         )}
         {/* {tablet && (

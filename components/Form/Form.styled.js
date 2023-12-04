@@ -23,7 +23,11 @@ export const Layout = styled.section`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #eaedf1;
+  gap: 12px;
+  @media screen and (min-width: 768px) {
+    background-color: #eaedf1;
+    gap: 0;
+  }
 `;
 export const Input = styled(Field)`
   font-size: 18px;
@@ -34,6 +38,9 @@ export const Input = styled(Field)`
   border-right: none;
   border-bottom: 1px solid #97d28b;
   padding: 6px 10px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
 `;
 export const InputMessage = styled.textarea`
   font-size: 18px;
