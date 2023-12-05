@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 export const Layout = styled.footer`
   padding: 24px 20px;
+
   @media screen and (min-width: 768px) {
     display: flex;
     padding: 24px 30px;
@@ -22,6 +23,11 @@ export const Layout = styled.footer`
       align-items: flex-end;
       justify-content: center;
     }
+    .list-desktop:nth-last-child(2) {
+      @media screen and (min-width: 1440px) {
+        margin-left: 500px;
+      }
+    }
     .list-contacts--item {
       display: block;
       color: #173d33;
@@ -38,6 +44,9 @@ export const Layout = styled.footer`
       justify-content: flex-start;
       gap: 8px;
     }
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 0 100px;
   }
   .logo-wrapper {
     display: flex;

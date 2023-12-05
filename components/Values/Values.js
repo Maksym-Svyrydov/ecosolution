@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useMediaQuery } from '@mui/material';
-import { Layout, Img } from './Values.styled.styled';
+import { Layout, Img, ImgGrid } from './Values.styled.styled';
 import wind from '../../img/content/values/wind.png';
 import solar from '../../img/content/values/solar.png';
 import img from '../../img/content/wind-turbine-clean-energy.png';
@@ -27,7 +27,7 @@ const ValuesSection = () => {
           meet the world&#39;s energy needs.
         </p>
       </div>
-      <div className="grid-wrapper">
+      <>
         {!tablet && (
           <div className="list">
             <div className="item box-1">
@@ -106,26 +106,25 @@ const ValuesSection = () => {
                 </span>
               </li>
               <li className="item-img box-3">
-                <Img
+                <ImgGrid
                   // width={234}
                   src={wind}
                   alt="turbines"
                   placeholder="blur"
                   priority={true}
                   fill={false}
-                  style={{ objectFit: 'contain' }}
+                  style={{ objectFit: 'cover' }}
                 />
               </li>
-            </ul>
-            <ul className="list">
+
               <li className="item-img box-4">
-                <Img
+                <ImgGrid
                   src={solar}
                   alt="solar panel"
                   placeholder="blur"
                   priority={true}
                   fill={false}
-                  style={{ objectFit: 'contain' }}
+                  style={{ objectFit: 'cover' }}
                 />
               </li>
               <li className="item box-5">
@@ -157,91 +156,7 @@ const ValuesSection = () => {
             </ul>
           </>
         )}
-        {/* {tablet && (
-          <div className="list">
-            <div className="item box-1">
-              <div className="item-title--block">
-                <Image src={circle} alt="circle icon" width={16} height={16} />
-                <span className="item-title">Openness</span>
-              </div>
-              <span className="item-text">
-                to the world, people, new ideas and projects
-              </span>
-            </div>
-            <div className="item box-2">
-              <div className="item-title--block">
-                <Image src={global} alt="circle icon" width={16} height={16} />
-                <span className="item-title">Responsibility</span>
-              </div>
-
-              <span className="item-text">
-                we are aware that the results of our work have an impact on our
-                lives and the lives of future generations
-              </span>
-            </div>
-
-        )}
-        <div className="list">
-          <div className="item box-1">
-            <div className="item-title--block">
-              <Image src={circle} alt="circle icon" width={16} height={16} />
-              <span className="item-title">Openness</span>
-            </div>
-
-            <span className="item-text">
-              to the world, people, new ideas and projects
-            </span>
-          </div>
-          <div className="item box-2">
-            <div className="item-title--block">
-              <Image src={global} alt="circle icon" width={16} height={16} />
-              <span className="item-title">Responsibility</span>
-            </div>
-
-            <span className="item-text">
-              we are aware that the results of our work have an impact on our
-              lives and the lives of future generations
-            </span>
-          </div>
-          {tablet && (
-
-          )}
-
-          {tablet && (
-            <div className="list">
-
-
-              <div className="item box-5">
-                <div className="item-title--block">
-                  <Image src={cpu} alt="circle icon" width={16} height={16} />
-                  <span className="item-title">Innovation</span>
-                </div>
-                <span className="item-text">
-                  we use the latest technology to implement non-standard
-                  solutions
-                </span>
-              </div>
-              <div className="item box-6">
-                <div className="item-title--block">
-                  <Image
-                    src={ranking}
-                    alt="circle icon"
-                    width={16}
-                    height={16}
-                  />
-                  <span className="item-title">Quality</span>
-                </div>
-
-                <span className="item-text">
-                  we do not strive to be the first among others, but we want to
-                  be the best in our business
-                </span>
-              </div>
-            </div>
-          )}
-        </div>
-      </div> */}
-      </div>
+      </>
     </Layout>
   );
 };

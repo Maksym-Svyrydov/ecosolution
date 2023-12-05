@@ -3,9 +3,11 @@ import styled from 'styled-components';
 export const Layout = styled.section`
   display: flex;
   flex-direction: column;
-
   padding: 0px 20px;
   margin-bottom: 36px;
+  @media screen and (min-width: 1440px) {
+    padding: 0px 100px;
+  }
   .title {
     color: #173d33;
     text-align: center;
@@ -20,6 +22,11 @@ export const Layout = styled.section`
       width: 368px;
       margin: 100px auto 0px auto;
     }
+    @media screen and (min-width: 1440px) {
+      font-size: 48px;
+      line-height: 48px;
+      width: 491px;
+    }
   }
   .line {
     width: 1px;
@@ -27,6 +34,9 @@ export const Layout = styled.section`
     flex-shrink: 0;
     background-color: #97d28b;
     margin: 24px auto;
+    @media screen and (min-width: 1440px) {
+      height: 87px;
+    }
   }
   .wrapper {
     display: flex;
@@ -45,6 +55,10 @@ export const Layout = styled.section`
     line-height: 48px; /* 100% */
     text-transform: uppercase;
     margin-right: 8px;
+    @media screen and (min-width: 1440px) {
+      font-size: 164px;
+      line-height: 164px; /* 100% */
+    }
   }
   .txt {
     display: inline-flex;
@@ -56,5 +70,9 @@ export const Layout = styled.section`
     font-weight: 400;
     line-height: 24px; /* 100% */
     padding: 0;
+    @media screen and (min-width: 1440px) {
+      font-size: 48px;
+      line-height: 48px;
+    }
   }
 `;

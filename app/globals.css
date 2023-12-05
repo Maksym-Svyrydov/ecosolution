@@ -24,7 +24,7 @@ html {
 body {
   box-sizing: border-box;
   margin: 0;
-  width: 100%;
+  max-width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'DM Sans', 'Droid Sans';
   background-color: #f3f5fa;

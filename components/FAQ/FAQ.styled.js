@@ -3,16 +3,24 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     padding: 0px 30px;
     gap: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 0px 100px;
   }
   .content-layout {
     @media screen and (min-width: 768px) {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 680px;
+      justify-content: center;
     }
   }
   .title {

@@ -6,6 +6,10 @@ export const Layout = styled.section`
     background-color: #eaedf1;
     padding: 36px 24px;
     border-bottom: none;
+    @media screen and (min-width: 1440px) {
+      width: 596px;
+      margin-bottom: 100px;
+    }
   }
   label {
     margin-bottom: 8px;

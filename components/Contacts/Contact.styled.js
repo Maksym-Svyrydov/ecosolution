@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 export const Section = styled.section`
   padding: 0px 20px;
+  @media screen and (min-width: 1440px) {
+    width: 500px;
+  }
+
   a {
     text-decoration: none;
     color: #173d33;

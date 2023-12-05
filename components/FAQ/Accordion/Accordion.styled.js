@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 export const Layout = styled.div`
+  @media screen and (min-width: 1440px) {
+    width: 675px;
+    padding-left: 5px;
+  }
   * {
     padding: 0;
     margin: 0;

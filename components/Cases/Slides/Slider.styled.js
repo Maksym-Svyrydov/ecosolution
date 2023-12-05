@@ -7,6 +7,9 @@ export const SliderLayout = styled.div`
     justify-content: space-between;
     align-items: end;
     margin-bottom: 18px;
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 100px;
+    }
   }
   .counter-active {
     color: #173d33;

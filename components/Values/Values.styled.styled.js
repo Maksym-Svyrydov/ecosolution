@@ -68,6 +68,8 @@ export const Layout = styled.section`
   }
   .grid-wrapper {
     @media screen and (min-width: 1440px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr;
     }
   }
   .list {
@@ -83,62 +85,74 @@ export const Layout = styled.section`
     margin-bottom: 36px;
 
     @media screen and (min-width: 768px) {
-      grid-template-columns: repeat(3, 3fr);
-      grid-template-rows: repeat(1, 3fr);
+      grid-template-columns: repeat(4, [col] 177px);
+      grid-template-rows: repeat(2, [row] 221px);
+      width: 768px;
+      margin: 0 auto;
       gap: 18px;
     }
     @media screen and (min-width: 1440px) {
-      gap: 24px;
-      width: 1242px;
-      margin-bottom: 0px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(4, [col] 310px);
+      grid-template-rows: repeat(2, [row] 364px);
+      grid-gap: 24px;
+      margin: 0 auto;
+      width: 1240px;
     }
   }
-
   .box-1 {
     grid-column: 1;
     grid-row: 1;
     @media screen and (min-width: 768px) {
-      grid-column: 1;
-      grid-row: 1;
+      grid-column: col / span 1;
+      grid-row: row;
+    }
+    @media screen and (min-width: 1440px) {
+      grid-column: col / span 1;
+      grid-row: row;
     }
   }
   .box-2 {
     grid-column: 2;
     grid-row: 1;
     @media screen and (min-width: 768px) {
-      grid-column: 2;
-      grid-row: 1;
+      grid-column: col 2 / span 1;
+      grid-row: row;
+    }
+    @media screen and (min-width: 1440px) {
+      grid-column: col 2 / span 1;
+      grid-row: row;
     }
   }
   .box-3 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row: 1;
+    @media screen and (min-width: 768px) {
+      grid-column: col 3 / span 2;
+      grid-row: row;
+    }
   }
   .box-4 {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
+    @media screen and (min-width: 768px) {
+      grid-column: col 1 / span 2;
+      grid-row: row 2;
+    }
   }
   .box-5 {
     grid-column: 1;
     grid-row: 2;
+
     @media screen and (min-width: 768px) {
-      grid-column-start: 2;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 2;
+      grid-column: col 3 / span 1;
+      grid-row: row 2;
     }
   }
   .box-6 {
     grid-column: 2;
     grid-row: 2;
+
     @media screen and (min-width: 768px) {
-      grid-column-start: 3;
-      grid-column-end: 3;
-      grid-row-start: 2;
-      grid-row-end: 2;
+      grid-column: col 4 / span 1;
+      grid-row: row 2;
     }
   }
 
@@ -163,6 +177,8 @@ export const Layout = styled.section`
     margin-bottom: 12px;
     display: flex;
     align-items: center;
+    @media screen and (min-width: 768px) {
+    }
     @media screen and (min-width: 1440px) {
       padding: 48px 0px 94px 24px;
     }
@@ -194,6 +210,20 @@ export const Layout = styled.section`
       margin: 24px 24px 0px 24px;
     }
   }
+  .item-img {
+    overflow: hidden;
+    width: 700px;
+    height: 339px;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      width: 410px;
+      height: 195px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 604px;
+      height: 405px;
+    }
+  }
 `;
 
 export const Img = styled(Image)`
@@ -202,10 +232,17 @@ export const Img = styled(Image)`
   height: 316.031px;
   object-fit: cover;
   @media screen and (min-width: 768px) {
-    width: 345px;
+    width: 100%;
+  }
+`;
+
+export const ImgGrid = styled(Image)`
+  @media screen and (min-width: 768px) {
+    width: 368px;
+    height: 197px;
   }
   @media screen and (min-width: 1440px) {
-    width: 604px;
-    height: 405px;
+    width: 625px;
+    height: 339px;
   }
 `;

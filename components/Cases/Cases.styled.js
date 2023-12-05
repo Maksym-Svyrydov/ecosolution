@@ -25,5 +25,17 @@ export const Layout = styled.section`
       margin: 0;
       line-height: 36px;
     }
+    @media screen and (min-width: 1440px) {
+      box-sizing: border-box;
+      display: block;
+      font-size: 48px;
+      width: 691px;
+      height: 96px;
+      margin: 0;
+      line-height: 48px;
+      padding-right: 300px;
+      padding-left: 8px;
+      border-right: 1px solid #97d28b;
+    }
   }
 `;
