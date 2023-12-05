@@ -1,4 +1,5 @@
 import { useMediaQuery } from '@mui/material';
+import { Link } from 'react-scroll';
 
 import { Layout, Logo } from './Footer.styled';
 import logoImg from '../../img/Logo.svg';
@@ -223,7 +224,13 @@ const Footer = () => {
           </ul>
           <ul className="list-desktop">
             <li className="item-desktop--img">
-              <div className="main-link--btn">
+              <Link
+                className="main-link--btn"
+                to="Main"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 <svg
                   className="main-link--arrow"
                   width="16"
@@ -247,7 +254,7 @@ const Footer = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </div>
+              </Link>
             </li>
             <li className="list-contacts--item">
               <p>ecosolution &#169; 2023</p>

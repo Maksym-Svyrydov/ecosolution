@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import { useMediaQuery } from '@mui/material';
 import CustomizedAccordions from './Accordion/Accordion.js';
 import { Section } from './FAQ.styled.js';
@@ -5,7 +6,7 @@ import { Section } from './FAQ.styled.js';
 const FaqSection = () => {
   const tablet = useMediaQuery('(min-width:768px)');
   return (
-    <Section>
+    <Section id="FAQ">
       {!tablet && (
         <>
           <h2 className="title">Frequently Asked Questions</h2>
@@ -31,7 +32,13 @@ const FaqSection = () => {
           <div className="content-layout">
             <h2 className="title">Frequently Asked Questions</h2>
             <p className="text">Didn&#39;t find the answer to your question?</p>
-            <div className="btn">
+            <Link
+              className="btn"
+              to="Contacts"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               <span>Contact Us</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +49,7 @@ const FaqSection = () => {
               >
                 <circle cx="7" cy="7.5" r="7" fill="#173D33" />
               </svg>
-            </div>
+            </Link>
           </div>
         </>
       )}

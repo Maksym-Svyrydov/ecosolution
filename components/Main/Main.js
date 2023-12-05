@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import { Layout } from './Main.styled';
 import { useMediaQuery } from '@mui/material';
 
 const MainSection = () => {
   const tablet = useMediaQuery('(min-width:768px)');
   return (
-    <Layout>
+    <Layout id="Main">
       <div className="main-title--wrapper">
         <h1 className="main-title">RENEWABLE ENERGY For any task</h1>
         <div className="text-wrapper">
@@ -14,7 +14,13 @@ const MainSection = () => {
             sources, generating power generation using energy wind, sun, water,
             biomass
           </p>
-          <Link className="main-link" href="#">
+          <Link
+            className="main-link"
+            to="Cases"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <span className="main-link--text">Learn more</span>
             <div className="main-link--btn">
               <svg

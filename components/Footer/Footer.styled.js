@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 export const Layout = styled.footer`
   padding: 24px 20px;
-
   @media screen and (min-width: 768px) {
     display: flex;
     padding: 24px 30px;
     justify-content: space-between;
+
     .list-desktop {
       display: flex;
       flex-direction: column;
@@ -65,13 +65,31 @@ export const Layout = styled.footer`
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    transition: color 0.25s ease;
 
     svg {
       width: 24px;
       height: 24px;
       transform: rotate(270deg);
+      transition: fill 0.25s ease;
+    }
+    path {
+      transition: stroke 0.25s ease;
     }
   }
+  .main-link--btn:hover {
+    background-color: #173d33;
+    color: #97d28b;
+    svg {
+      fill: #97d28b;
+    }
+    path {
+      stroke: #97d28b;
+    }
+  }
+
   a {
     text-decoration: none;
     color: #173d33;

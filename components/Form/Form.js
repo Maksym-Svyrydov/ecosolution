@@ -4,7 +4,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from 'styled-components';
 import { Layout, InputContainer, Input, ButtonSubmit } from './Form.styled';
-import { TextareaAutosize } from '@mui/material';
 
 const StyledContainer = styled(ToastContainer)`
   .Toastify__toast {

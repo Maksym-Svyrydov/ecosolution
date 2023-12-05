@@ -13,7 +13,7 @@ const ValuesSection = () => {
   const mobile = useMediaQuery('(max-width:480px)');
   const tablet = useMediaQuery('(min-width:768px)');
   return (
-    <Layout>
+    <Layout id="About">
       {!mobile && (
         <Img src={img} alt="Turbine" placeholder="blur" loading="lazy" />
       )}

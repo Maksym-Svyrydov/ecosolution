@@ -2,7 +2,7 @@ import { Layout } from './Electricity.styled';
 
 const ElectricitySection = () => {
   return (
-    <Layout>
+    <Layout id="Cases">
       <h2 className="title">Electricity we produced for all time</h2>
       <div className="line"></div>
       <div className="wrapper">

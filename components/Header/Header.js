@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useMediaQuery } from '@mui/material';
-import { Container, Logo, NavWrapp, NavBtn, IconMenu } from './Header.styled';
+import { Link } from 'react-scroll';
 
+import { Container, Logo, NavWrapp, NavBtn, IconMenu } from './Header.styled';
 import logoImg from '../../img/Logo.svg';
 import icon from '../../img/icons/menu.svg';
 
@@ -19,7 +20,7 @@ const Header = () => {
 
   return (
     <>
-      <Container>
+      <Container id="Header">
         <Logo
           src={logoImg}
           alt="Logo"
@@ -39,7 +40,13 @@ const Header = () => {
           )}
         </NavWrapp>
         {tablet && (
-          <div className="btn">
+          <Link
+            className="btn"
+            to="Contacts"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <span>Get in touch</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +57,7 @@ const Header = () => {
             >
               <circle cx="7" cy="7.5" r="7" fill="none" />
             </svg>
-          </div>
+          </Link>
         )}
       </Container>
       {showNav && <NavMenu navClose={toggleNav} />}

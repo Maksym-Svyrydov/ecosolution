@@ -63,5 +63,16 @@ export const Section = styled.section`
     width: 130px;
     height: 39px;
     margin: 0px auto 0px auto;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    transition: color 0.25s ease;
+    transition: fill 0.25s ease;
+  }
+  .btn:hover {
+    background-color: #173d33;
+    color: #97d28b;
+    circle {
+      fill: #97d28b;
+    }
   }
 `;

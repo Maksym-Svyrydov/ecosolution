@@ -123,6 +123,10 @@ export const Slide = styled.div`
     border-radius: 100px;
     background-color: #97d28b;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    transition: color 0.25s ease;
+    transition: fill 0.25s ease;
   }
   .slider-btn--arrow {
     path {

@@ -66,19 +66,60 @@ export const NavMenu = ({ navClose }) => {
           </BtnWrapp>
         </CloseSection>
         <NavList>
-          <NavItem className="active">
+          <NavItem
+            className="active"
+            to="Main"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              navClose();
+            }}
+          >
             Main <Arrow>&#8599;</Arrow>
           </NavItem>
-          <NavItem>
+          <NavItem
+            to="About"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              navClose();
+            }}
+          >
             About <Arrow>&#8599;</Arrow>
           </NavItem>
-          <NavItem>
+          <NavItem
+            to="Cases"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              navClose();
+            }}
+          >
             Cases <Arrow>&#8599;</Arrow>
           </NavItem>
-          <NavItem>
+          <NavItem
+            to="FAQ"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              navClose();
+            }}
+          >
             FAQ <Arrow>&#8599;</Arrow>
           </NavItem>
-          <NavItem>
+          <NavItem
+            to="Contacts"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              navClose();
+            }}
+          >
             Contact Us<Arrow>&#8599;</Arrow>
           </NavItem>
         </NavList>

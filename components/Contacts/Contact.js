@@ -4,7 +4,7 @@ import { Section } from './Contact.styled';
 const Contacts = () => {
   const tablet = useMediaQuery('(min-width:768px)');
   return (
-    <Section>
+    <Section id="Contacts">
       {!tablet && <h2 className="title-contacts">Contact us</h2>}
       <div>
         <p>Phone:</p>

@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import Image from 'next/image';
 export const Container = styled.header`
@@ -5,7 +6,7 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 4;
@@ -41,6 +42,7 @@ export const Container = styled.header`
     transition: background-color 0.25s ease;
     transition: color 0.25s ease;
     transition: fill 0.25s ease;
+    cursor: pointer;
     @media screen and (min-width: 767px) {
       margin: 0px 0px 0px 12px;
     }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -78,7 +79,7 @@ export const NavList = styled.ul`
   padding: 0;
 `;
 
-export const NavItem = styled.li`
+export const NavItem = styled(Link)`
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.25);
