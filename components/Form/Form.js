@@ -1,129 +1,139 @@
-import { Formik, Form } from 'formik';
-import { nanoid } from 'nanoid';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import styled from 'styled-components';
-import { Layout, InputContainer, Input, ButtonSubmit } from './Form.styled';
+import { useFormik } from 'formik';
 
-const StyledContainer = styled(ToastContainer)`
-  .Toastify__toast {
-    color: #f5f2f0;
-    background: #283340;
-    border: 3px solid #cbbe9c;
-    border-radius: 12px;
-  }
-  .Toastify__progress-bar {
-    background: #cbbe9c;
-    height: 10px;
-  }
-  svg {
-    fill: #cbbe9c;
-  }
-`;
+import { nanoid } from 'nanoid';
+
+import { schemas } from '../schemas/schema';
+import { Layout, FormContainer, ButtonSubmit } from './Form.styled';
+
+const onSubmit = async (values, actions) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  console.log(values);
+  actions.resetForm();
+};
+
 const FormSection = () => {
-  async function handleSubmit(values, onSubmitProps) {
-    const notify = () => {
-      toast.success(
-        `Thank you ${values.user} for your request! We will definitely contact you soon!`
-      );
-    };
-    const data = {
-      id: values.id,
-      user: values.user,
-      phone: values.phone,
-      email: values.email,
-      details: values.details,
-    };
-    console.log(data);
-    onSubmitProps.resetForm();
-    notify();
-  }
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+  } = useFormik({
+    initialValues: {
+      id: nanoid(),
+      name: '',
+      phone: '',
+      email: '',
+      message: '',
+    },
+    validationSchema: schemas,
+    onSubmit,
+  });
+
   return (
     <Layout>
-      <Formik
-        initialValues={{
-          id: nanoid(),
-          user: '',
-          phone: '',
-          email: '',
-          details: '',
-        }}
-        method="POST"
-        onSubmit={handleSubmit}
-      >
-        <Form>
-          <InputContainer>
-            <label>* Full name:</label>
-            <Input id="user" name="user" placeholder="John Rosie" required />
-            <label>* E-mail:</label>
-            <Input
-              id="email"
-              name="email"
-              placeholder="johnrosie@gmail.com"
-              type="email"
-              required
-            />
-            <label>* Phone:</label>
-            <Input
-              id="phone"
-              name="phone"
-              placeholder="380961234567"
-              required
-            />
-            <label>Message:</label>
-            <Input
-              id="details"
-              name="details"
-              placeholder="Your message"
-              as="textarea"
-              className="form-textarea"
-              rows={8}
-            />
-            <ButtonSubmit type="submit">
-              <span>Send</span>
-              <div className="main-link--btn">
-                <svg
-                  className="main-link--arrow"
-                  width="16"
-                  height="17"
-                  viewBox="0 0 16 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.62012 4.45312L13.6668 8.49979L9.62012 12.5465"
-                    stroke="none"
-                    strokeMiterlimit="10"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M2.3335 8.5H13.5535"
-                    stroke="none"
-                    strokeMiterlimit="10"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-            </ButtonSubmit>
-          </InputContainer>
-        </Form>
-      </Formik>
-      <StyledContainer
-        position="top-right"
-        autoClose={3500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+      <FormContainer onSubmit={handleSubmit} autoComplete="on">
+        <label htmlFor="name">* Full name:</label>
+        <input
+          id="name"
+          type="name"
+          placeholder="John Rosie"
+          value={values.name}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          className={
+            (errors.name && touched.name ? 'input-error' : '', 'input')
+          }
+        />
+        <div className="error-wrapper">
+          {errors.name && touched.name && (
+            <p className="error">{errors.name}</p>
+          )}
+        </div>
+        <label htmlFor="email">* E-mail:</label>
+        <input
+          value={values.email}
+          onChange={handleChange}
+          id="email"
+          type="email"
+          placeholder="johnrosie@gmail.com"
+          onBlur={handleBlur}
+          className={
+            (errors.email && touched.email ? 'input-error' : '', 'input')
+          }
+        />
+        <div className="error-wrapper">
+          {errors.email && touched.email && (
+            <p className="error">{errors.email}</p>
+          )}
+        </div>
+        <label htmlFor="phone">* Phone:</label>
+        <input
+          id="phone"
+          type="phone"
+          placeholder="380961234567"
+          value={values.phone}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          className={
+            (errors.phone && touched.phone ? 'input-error' : '', 'input')
+          }
+        />
+        <div className="error-wrapper">
+          {errors.phone && touched.phone && (
+            <p className="error">{errors.phone}</p>
+          )}
+        </div>
+        {/* text area */}
+
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          type="textarea"
+          placeholder="My message...."
+          rows={8}
+          value={values.message}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          className={
+            (errors.message && touched.message ? 'input-error' : '', 'input')
+          }
+        />
+        {errors.message && touched.message && (
+          <p className="error">{errors.message}</p>
+        )}
+        <ButtonSubmit disabled={isSubmitting} type="submit">
+          <span>Send</span>
+          <div className="main-link--btn">
+            <svg
+              className="main-link--arrow"
+              width="16"
+              height="17"
+              viewBox="0 0 16 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.62012 4.45312L13.6668 8.49979L9.62012 12.5465"
+                stroke="none"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M2.3335 8.5H13.5535"
+                stroke="none"
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </ButtonSubmit>
+      </FormContainer>
     </Layout>
   );
 };
-
 export default FormSection;

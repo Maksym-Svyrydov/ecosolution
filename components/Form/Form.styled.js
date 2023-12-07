@@ -1,18 +1,51 @@
 import styled from 'styled-components';
-import { Field } from 'formik';
+import { ToastContainer } from 'react-toastify';
 export const Layout = styled.section`
+  display: flex;
   padding: 36px 20px;
+  background-color: #eaedf1;
   @media screen and (min-width: 768px) {
-    background-color: #eaedf1;
-    padding: 36px 24px;
     border-bottom: none;
     margin-bottom: 100px;
+    padding: 0;
+    width: 342px;
     @media screen and (min-width: 1440px) {
       width: 596px;
       margin-bottom: 120px;
     }
   }
-  label {
+`;
+
+export const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #eaedf1;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    gap: 0;
+    padding: 36px 24px;
+    border-bottom: none;
+  }
+  @media screen and (min-width: 1440px) {
+  }
+
+  .input {
+    font-size: 18px;
+    color: #283340;
+    background-color: inherit;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #97d28b;
+    padding: 6px 10px;
+    &:writing-mode {
+      background-color: inherit;
+    }
+    @media screen and (min-width: 768px) {
+    }
+  }
+  .input label {
     margin-bottom: 8px;
     color: #173d33;
     text-align: justify;
@@ -22,42 +55,32 @@ export const Layout = styled.section`
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.64px;
+    background-color: inherit;
   }
-`;
 
-export const InputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  @media screen and (min-width: 768px) {
-    background-color: #eaedf1;
-    gap: 0;
+  .error-wrapper {
+    margin-top: 4px;
+    height: 18px;
+  }
+  .error {
+    color: #d28b8b;
+    text-align: right;
+    font-family: Fira Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    margin: 0;
+    padding: 0;
+    height: 18px;
+  }
+  input.input-error {
+    height: 16px;
+    border-color: #fc8181;
+    background-color: inherit;
   }
 `;
-export const Input = styled(Field)`
-  font-size: 18px;
-  color: #283340;
-  background-color: inherit;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #97d28b;
-  padding: 6px 10px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 24px;
-  }
-`;
-export const InputMessage = styled.textarea`
-  font-size: 18px;
-  color: #283340;
-  background: inherit;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #97d28b;
-  padding: 6px 10px;
-`;
-
 export const ButtonSubmit = styled.button`
   display: flex;
   height: 39px;

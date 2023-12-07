@@ -3,7 +3,7 @@ export const DesktopLayout = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0px 30px 0px 30px;
-  gap: 122px;
+  gap: 82px;
   border-bottom: 1px solid #97d28b;
   @media screen and (min-width: 1440px) {
     padding: 0px 100px;
