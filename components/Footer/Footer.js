@@ -121,9 +121,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="list-contacts--item">
-              <a href="mailto:office@ecosolution.com" type="Email">
-                office@ecosolution.com
-              </a>
+              <a href="mailto:office@ecosolution.com">office@ecosolution.com</a>
             </li>
             <li className="list-contacts--item">
               <p>ecosolution &#169; 2023</p>
@@ -217,9 +215,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="list-contacts--item">
-              <a href="mailto:office@ecosolution.com" type="Email">
-                office@ecosolution.com
-              </a>
+              <a href="mailto:office@ecosolution.com">office@ecosolution.com</a>
             </li>
           </ul>
           <ul className="list-desktop">

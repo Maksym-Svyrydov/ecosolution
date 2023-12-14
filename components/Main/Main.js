@@ -54,7 +54,7 @@ const MainSection = () => {
         <address className="main-address">
           79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
         </address>
-        <a className="main-email" type="email" href="office@ecosolution.com">
+        <a className="main-email" href="office@ecosolution.com">
           office@ecosolution.com
         </a>
         {tablet && <span>ecosolution &#169; 2023</span>}

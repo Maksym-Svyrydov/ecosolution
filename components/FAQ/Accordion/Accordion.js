@@ -7,7 +7,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
   const contentHeight = useRef();
   return (
     <div className="wrapper">
-      <button
+      <div
         className={`question-container ${isOpen ? 'active' : ''}`}
         onClick={onClick}
       >
@@ -56,7 +56,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
           </div>
         )}
         <p className="question-content">{question}</p>
-      </button>
+      </div>
 
       <div
         ref={contentHeight}

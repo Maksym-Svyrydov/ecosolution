@@ -73,9 +73,7 @@ const Contacts = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <a href="mailto:office@ecosolution.com" type="Email">
-              office@ecosolution.com
-            </a>
+            <a href="mailto:office@ecosolution.com">office@ecosolution.com</a>
           </li>
         </ul>
       </div>

@@ -38,8 +38,8 @@ const FormSection = () => {
         <label htmlFor="name">* Full name:</label>
         <input
           id="name"
-          type="name"
           placeholder="John Rosie"
+          type="text"
           value={values.name}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -72,7 +72,7 @@ const FormSection = () => {
         <label htmlFor="phone">* Phone:</label>
         <input
           id="phone"
-          type="phone"
+          type="tel"
           placeholder="380961234567"
           value={values.phone}
           onChange={handleChange}
@@ -91,7 +91,7 @@ const FormSection = () => {
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"
-          type="textarea"
+          type="text"
           placeholder="My message...."
           rows={8}
           value={values.message}
@@ -106,7 +106,7 @@ const FormSection = () => {
         )}
         <ButtonSubmit disabled={isSubmitting} type="submit">
           <span>Send</span>
-          <div className="main-link--btn">
+          <p className="main-link--btn">
             <svg
               className="main-link--arrow"
               width="16"
@@ -130,7 +130,7 @@ const FormSection = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </p>
         </ButtonSubmit>
       </FormContainer>
     </Layout>
