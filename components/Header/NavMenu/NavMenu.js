@@ -68,6 +68,7 @@ export const NavMenu = ({ navClose }) => {
         <NavList>
           <NavItem
             className="active"
+            href="#"
             to="Main"
             spy={true}
             smooth={true}
@@ -80,6 +81,7 @@ export const NavMenu = ({ navClose }) => {
           </NavItem>
           <NavItem
             to="About"
+            href="#"
             spy={true}
             smooth={true}
             duration={500}
@@ -91,6 +93,7 @@ export const NavMenu = ({ navClose }) => {
           </NavItem>
           <NavItem
             to="Cases"
+            href="#"
             spy={true}
             smooth={true}
             duration={500}
@@ -102,6 +105,7 @@ export const NavMenu = ({ navClose }) => {
           </NavItem>
           <NavItem
             to="FAQ"
+            href="#"
             spy={true}
             smooth={true}
             duration={500}
@@ -113,6 +117,7 @@ export const NavMenu = ({ navClose }) => {
           </NavItem>
           <NavItem
             to="Contacts"
+            href="#"
             spy={true}
             smooth={true}
             duration={500}

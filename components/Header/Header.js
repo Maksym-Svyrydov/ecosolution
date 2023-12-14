@@ -41,6 +41,8 @@ const Header = () => {
         </NavWrapp>
         {tablet && (
           <Link
+            href="#"
+            rel="preload"
             className="btn"
             to="Contacts"
             spy={true}
