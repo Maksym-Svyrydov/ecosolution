@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const Section = styled.section`
+export const Section = styled.div`
   padding: 0px 20px;
   @media screen and (min-width: 1440px) {
     width: 500px;

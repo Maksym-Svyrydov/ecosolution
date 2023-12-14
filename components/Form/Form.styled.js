@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ToastContainer } from 'react-toastify';
-export const Layout = styled.section`
+export const Layout = styled.div`
   display: flex;
   padding: 36px 20px;
   background-color: #eaedf1;

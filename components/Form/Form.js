@@ -91,7 +91,6 @@ const FormSection = () => {
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"
-          type="text"
           placeholder="My message...."
           rows={8}
           value={values.message}
@@ -106,7 +105,7 @@ const FormSection = () => {
         )}
         <ButtonSubmit disabled={isSubmitting} type="submit">
           <span>Send</span>
-          <p className="main-link--btn">
+          <span className="main-link--btn">
             <svg
               className="main-link--arrow"
               width="16"
@@ -130,7 +129,7 @@ const FormSection = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </p>
+          </span>
         </ButtonSubmit>
       </FormContainer>
     </Layout>
